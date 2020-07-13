@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/verificationFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="15dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backVerificationImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"/>
+        <TextView
+            android:id="@+id/signUpTopTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="25sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="Verification"
+            android:textColor="@android:color/tertiary_text_dark"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/verificationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:text="We texted you a code to verify your phone number "
+        android:textColor="@android:color/tertiary_text_dark"/>
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal"
+        android:cursorVisible="true"
+        android:padding="8dp"
+        android:itemBackground="@android:color/white"
+        app:cursorColor="@color/mainColor"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="50dp"
+        app:itemRadius="10dp"
+        app:itemSpacing="5dp"
+        app:itemWidth="50dp"
+        app:lineColor="@android:color/white"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:text="i did not recieve a code "
+        android:textColor="@android:color/tertiary_text_dark"/>
+    <TextView
+        android:id="@+id/resendVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="RESEND"
+        android:textColor="@color/mainColor"/>
+   <!-- <Button
+        android:id="@+id/continueVerificationButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="75dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="Continue"
+        android:background="@drawable/custom_button"/>-->
+    <RelativeLayout
+        android:id="@+id/continueVerificationButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="75dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_button">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/continueImage"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle=""
+            android:text="CONTINUE"/>
+
+        <ImageView
+            android:id="@+id/continueImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_button_next"
+            android:src="@drawable/icon_next_button_foreground" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signUpFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="15dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backSignUpImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"/>
+        <TextView
+            android:id="@+id/signUpTopTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Let's Get Started "
+            android:textColor="@android:color/tertiary_text_dark"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textStyle="italic"
+        android:text="Please enter your mobile number to sign up "
+        android:textColor="@android:color/tertiary_text_dark"/>
+    <RelativeLayout
+        android:id="@+id/phoneAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:paddingHorizontal="10dp">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCode"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:ccp_defaultNameCode="US"
+            app:ccp_textSize="20sp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryAutoDetectionPref="SIM_ONLY"
+            app:ccp_showNameCode="false"
+            />
+        <View
+            android:layout_width="2dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/darker_gray"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/mobilePhoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:paddingLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:inputType="phone"
+            android:background="@android:color/transparent"
+            android:hint="Mobile phone"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+   <!-- <Button
+        android:id="@+id/continueSighUpButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="Continue"
+        android:background="@drawable/custom_button"/>-->
+    <RelativeLayout
+        android:id="@+id/continueSighUpButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_button">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/continueImage"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle=""
+            android:text="CONTINUE"/>
+
+        <ImageView
+            android:id="@+id/continueImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_button_next"
+            android:src="@drawable/icon_next_button_foreground" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
